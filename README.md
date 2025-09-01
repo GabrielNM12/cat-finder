@@ -28,6 +28,6 @@ Clone the repo:
 git clone https://github.com/GabrielNM12/json-cat.git
 cd cat-finder
 
-```markdown
+
 > ⚠️ Note: If opening `index.html` directly doesn’t load cats.json due to browser restrictions, serve the folder with a local server.  
 > Example with Python: `python3 -m http.server 8000`
