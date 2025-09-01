@@ -23,10 +23,13 @@ var myCats =  [
 ]
 
 $(function(){
-    $('#btn').click(getGato);
+    $('#btn').click(searchCat);
 })
 
-function getGato(){
+/**
+ * Search for a cat object in myCats array, then applies their info in the front.
+ */
+function searchCat(){
 
     const inputCatName = $('#catNameInput').val().toLowerCase();
     let jsonCat = myCats.find(c => c.nome.toLowerCase() == inputCatName);
