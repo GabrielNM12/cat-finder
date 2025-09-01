@@ -1,9 +1,9 @@
-var myCats =  await fetch('./cats.json')
+$(async function(){
+
+    window.myCats =  await fetch('./cats.json')
                     .then(response => response.json())
                     .catch(err => console.error('Error loading JSON:', err));
 
-
-$(function(){
     $('#btn').click(searchCat);
 })
 
