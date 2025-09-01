@@ -1,26 +1,7 @@
-var myCats =  [
-    {
-        "id": 1,
-        "nome": "Chico",
-        "descricao": "O Chico cansou de ser Gato e virou Dinossauro.",
-        "fotoURL": "image/gato-01.jpg",
-        "fotoURLdefault": "image/gato-00.jpg"
-    },
+var myCats =  fetch('./cats.json')
+              .then(response => response.json())
+              .catch(err => console.error('Error loading JSON:', err));
 
-    {
-        "id": 2,
-        "nome": "Hamilton",
-        "descricao": "Hamilton é o gato mais hipster que você vai ver hoje.",
-        "fotoURL": "image/gato-02.jpg"
-    },
-
-    {
-        "id": 3,
-        "nome": "Nala",
-        "descricao": "Nala e uma gata muito fofinha e extrovertida.",
-        "fotoURL": "image/gato-03.jpg"
-    },
-]
 
 $(function(){
     $('#btn').click(searchCat);
